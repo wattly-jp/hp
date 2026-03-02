@@ -19,7 +19,7 @@
 - [ ] もしもアフィリエイト 登録
 
 ### 初期コンテンツ制作（Step 1: ロングテール）
-- [ ] 電気料金の仕組み解説（ハブ記事）→ 原稿あり: `marketing/article/electricity-bill-structure.md`
+- [ ] 電気料金の仕組み解説（ハブ記事）→ 原稿あり: `marketing/column/electricity-bill-structure.md`
 - [ ] 一人暮らし向け電力会社比較
 - [ ] 太陽光パネルは元が取れるか
 - [ ] 電気代節約術10選
@@ -72,5 +72,5 @@
 ## ✅ 完了済み
 
 - [x] アフィリエイト戦略策定 → `事業運営/アフィリエイト戦略.md`
-- [x] コンテンツ計画策定 → `marketing/article/コンテンツ計画.md`
-- [x] 初期記事原稿作成（電気料金の仕組み） → `marketing/article/electricity-bill-structure.md`
+- [x] コンテンツ計画策定 → `marketing/column/コンテンツ計画.md`
+- [x] 初期記事原稿作成（電気料金の仕組み） → `marketing/column/electricity-bill-structure.md`
