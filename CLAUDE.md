@@ -21,6 +21,11 @@ wattly/
 └── images/           ← ロゴ・素材
 ```
 
+### URL設計
+- 全ての記事を `/column/` 配下に統一する
+- 例: `wattly.jp/column/electricity-bill-structure`
+- 消費者向け・事業者向けの区別はURLではなくタグやカテゴリで管理
+
 ## フェーズ
 
 ### Phase 0: アフィリエイトメディア運営（現在）
