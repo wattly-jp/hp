@@ -5,7 +5,7 @@ export function ArticleCard({ article }: { article: Article }) {
   return (
     <Link
       href={`/column/${article.slug}`}
-      className="block rounded-lg bg-wt-surface border border-wt-border p-5 hover:shadow-md hover:-translate-y-0.5 transition-all"
+      className="block rounded-xl bg-wt-surface border border-wt-border p-5 hover:shadow-lg hover:-translate-y-1 hover:border-wt-primary/30 transition-all duration-300"
     >
       <p className="text-xs text-wt-text-muted mb-2">
         {article.date} ・ {article.category}
@@ -21,7 +21,7 @@ export function ArticleCard({ article }: { article: Article }) {
           {article.tags.map((tag) => (
             <span
               key={tag}
-              className="text-xs px-2 py-0.5 rounded bg-wt-bg text-wt-text-muted"
+              className="text-xs px-2 py-0.5 rounded bg-wt-emerald-50 text-wt-primary-dark"
             >
               {tag}
             </span>

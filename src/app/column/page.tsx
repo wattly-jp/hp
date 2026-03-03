@@ -12,22 +12,26 @@ export default function ColumnPage() {
   const articles = getAllArticles();
 
   return (
-    <section className="pt-24 pb-16 px-4">
-      <div className="mx-auto max-w-4xl">
-        <h1 className="text-2xl font-bold mb-2">コラム</h1>
-        <p className="text-wt-text-secondary mb-8">
+    <>
+      <section className="pt-28 pb-12 px-4 bg-gradient-to-br from-wt-forest to-[#1a4731] text-white text-center">
+        <h1 className="text-3xl font-bold mb-2">コラム</h1>
+        <p className="text-green-200">
           暮らしのエネルギーに関する情報をわかりやすくお届けします。
         </p>
-        {articles.length === 0 ? (
-          <p className="text-wt-text-muted">記事はまだありません。</p>
-        ) : (
-          <div className="grid md:grid-cols-2 gap-4">
-            {articles.map((a) => (
-              <ArticleCard key={a.slug} article={a} />
-            ))}
-          </div>
-        )}
-      </div>
-    </section>
+      </section>
+      <section className="py-14 px-4">
+        <div className="mx-auto max-w-4xl">
+          {articles.length === 0 ? (
+            <p className="text-wt-text-muted">記事はまだありません。</p>
+          ) : (
+            <div className="grid md:grid-cols-2 gap-5">
+              {articles.map((a) => (
+                <ArticleCard key={a.slug} article={a} />
+              ))}
+            </div>
+          )}
+        </div>
+      </section>
+    </>
   );
 }

@@ -1,17 +1,21 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-wt-bg: #f8fafc;
+  --color-wt-bg: #f7faf8;
   --color-wt-surface: #ffffff;
-  --color-wt-header: #0d1b2a;
-  --color-wt-blue: #1b9aaa;
-  --color-wt-blue-light: #22b8cc;
-  --color-wt-yellow: #f5c542;
-  --color-wt-yellow-light: #ffd566;
-  --color-wt-border: #e2e8f0;
-  --color-wt-text: #1a202c;
-  --color-wt-text-secondary: #4a5568;
-  --color-wt-text-muted: #718096;
+  --color-wt-surface-alt: #ecf5ee;
+  --color-wt-primary: #16a34a;
+  --color-wt-primary-light: #22c55e;
+  --color-wt-primary-dark: #15803d;
+  --color-wt-forest: #14532d;
+  --color-wt-header: #14532d;
+  --color-wt-emerald-50: #ecfdf5;
+  --color-wt-amber: #f59e0b;
+  --color-wt-amber-light: #fbbf24;
+  --color-wt-border: #d1e7d6;
+  --color-wt-text: #1a2e1f;
+  --color-wt-text-secondary: #4b6853;
+  --color-wt-text-muted: #7a9484;
 }
 
 body {
@@ -24,9 +28,13 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-.animate-fade-in {
-  animation: fade-in 0.6s ease-out both;
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(32px); }
+  to { opacity: 1; transform: translateY(0); }
 }
+
+.animate-fade-in { animation: fade-in 0.6s ease-out both; }
+.animate-slide-up { animation: slide-up 0.8s ease-out both; }
 
 .prose-wt h1 {
   font-size: 1.75rem;
@@ -40,8 +48,8 @@ body {
   font-weight: 700;
   margin-top: 2.5rem;
   margin-bottom: 1rem;
-  color: var(--color-wt-text);
-  border-bottom: 1px solid var(--color-wt-border);
+  color: var(--color-wt-forest);
+  border-bottom: 2px solid var(--color-wt-border);
   padding-bottom: 0.5rem;
 }
 
@@ -72,20 +80,20 @@ body {
 
 .prose-wt strong {
   color: var(--color-wt-text);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .prose-wt blockquote {
-  border-left: 3px solid var(--color-wt-blue);
+  border-left: 3px solid var(--color-wt-primary);
   margin: 1.5rem 0;
-  color: var(--color-wt-text-muted);
-  background: #f0f9fa;
-  padding: 1rem;
+  color: var(--color-wt-text-secondary);
+  background: var(--color-wt-emerald-50);
+  padding: 1rem 1.5rem;
   border-radius: 0 0.5rem 0.5rem 0;
 }
 
 .prose-wt a {
-  color: var(--color-wt-blue);
+  color: var(--color-wt-primary);
   text-decoration: underline;
 }
 
@@ -102,6 +110,6 @@ body {
 }
 
 .prose-wt th {
-  background: #f1f5f9;
+  background: var(--color-wt-emerald-50);
   font-weight: 600;
 }
