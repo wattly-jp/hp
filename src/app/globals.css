@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-wt-bg: #f8fafc;
+  --color-wt-surface: #ffffff;
+  --color-wt-header: #0d1b2a;
+  --color-wt-blue: #1b9aaa;
+  --color-wt-blue-light: #22b8cc;
+  --color-wt-yellow: #f5c542;
+  --color-wt-yellow-light: #ffd566;
+  --color-wt-border: #e2e8f0;
+  --color-wt-text: #1a202c;
+  --color-wt-text-secondary: #4a5568;
+  --color-wt-text-muted: #718096;
+}
+
+body {
+  background-color: var(--color-wt-bg);
+  color: var(--color-wt-text);
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out both;
+}
+
+.prose-wt h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--color-wt-text);
+}
+
+.prose-wt h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-wt-text);
+  border-bottom: 1px solid var(--color-wt-border);
+  padding-bottom: 0.5rem;
+}
+
+.prose-wt h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-wt-text);
+}
+
+.prose-wt p {
+  margin-bottom: 1.25rem;
+  line-height: 1.85;
+  color: var(--color-wt-text-secondary);
+}
+
+.prose-wt ul, .prose-wt ol {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+  color: var(--color-wt-text-secondary);
+}
+
+.prose-wt li {
+  margin-bottom: 0.5rem;
+  line-height: 1.75;
+}
+
+.prose-wt strong {
+  color: var(--color-wt-text);
+  font-weight: 600;
+}
+
+.prose-wt blockquote {
+  border-left: 3px solid var(--color-wt-blue);
+  margin: 1.5rem 0;
+  color: var(--color-wt-text-muted);
+  background: #f0f9fa;
+  padding: 1rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.prose-wt a {
+  color: var(--color-wt-blue);
+  text-decoration: underline;
+}
+
+.prose-wt table {
+  width: 100%;
+  margin: 1.5rem 0;
+  border-collapse: collapse;
+}
+
+.prose-wt th, .prose-wt td {
+  border: 1px solid var(--color-wt-border);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+
+.prose-wt th {
+  background: #f1f5f9;
+  font-weight: 600;
+}
