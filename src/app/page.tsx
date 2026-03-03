@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { Zap, ArrowRight, Scale, Sun, Building2, BookOpen } from "lucide-react";
+import { Zap, ArrowRight, Scale, Sun, Building2, BookOpen, Mail } from "lucide-react";
 import { getAllArticles } from "@/lib/media";
 import { ArticleCard } from "@/components/ArticleCard";
+import ContactForm from "@/components/ContactForm";
 import { CATEGORIES } from "@/lib/constants";
 
 const CATEGORY_ICONS: Record<string, typeof Scale> = {
@@ -82,6 +83,20 @@ export default function HomePage() {
           </section>
         );
       })}
+
+      {/* Contact */}
+      <section className="py-20 px-4 bg-wt-surface-alt">
+        <div className="mx-auto max-w-4xl text-center mb-10">
+          <div className="inline-flex items-center justify-center h-10 w-10 rounded-lg bg-wt-primary/10 text-wt-primary mb-4">
+            <Mail size={20} />
+          </div>
+          <h2 className="text-xl font-bold text-wt-text mb-2">お問い合わせ</h2>
+          <p className="text-wt-text-secondary text-sm">
+            記事に関するご質問や掲載のご相談など、お気軽にお問い合わせください。
+          </p>
+        </div>
+        <ContactForm />
+      </section>
 
       {/* About */}
       <section className="bg-gradient-to-br from-wt-primary to-wt-hero-to text-white py-20 px-4">
