@@ -22,7 +22,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-28 pb-20 px-4 bg-gradient-to-br from-wt-forest to-[#1a4731] text-white">
+      <section className="pt-28 pb-20 px-4 bg-gradient-to-br from-wt-hero-from to-wt-hero-to text-white">
         <div className="mx-auto max-w-3xl text-center animate-slide-up">
           <div className="inline-flex items-center gap-2 mb-5">
             <Zap size={28} className="text-wt-amber" />
@@ -32,7 +32,7 @@ export default function HomePage() {
             <br className="sm:hidden" />
             <span className="text-wt-amber">わかりやすく。</span>
           </h1>
-          <p className="text-green-200 text-lg max-w-xl mx-auto leading-relaxed">
+          <p className="text-emerald-100 text-lg max-w-xl mx-auto leading-relaxed">
             電力会社の選び方から太陽光・蓄電池まで、
             <br className="hidden md:block" />
             暮らしのエネルギー情報をお届けします。
@@ -40,7 +40,7 @@ export default function HomePage() {
           <div className="mt-8">
             <Link
               href="/column"
-              className="inline-flex items-center gap-2 bg-white hover:bg-green-50 text-wt-forest font-bold px-8 py-3.5 rounded-xl shadow-lg transition-all hover:shadow-xl"
+              className="inline-flex items-center gap-2 bg-white hover:bg-emerald-50 text-wt-primary-dark font-bold px-8 py-3.5 rounded-xl shadow-lg transition-all hover:shadow-xl"
             >
               記事を読む
               <ArrowRight size={16} />
@@ -50,7 +50,7 @@ export default function HomePage() {
             {CATEGORIES.map((cat) => (
               <span
                 key={cat.slug}
-                className="text-xs px-3 py-1 rounded-full bg-white/10 text-green-200 backdrop-blur"
+                className="text-xs px-3 py-1 rounded-full bg-white/15 text-emerald-100 backdrop-blur"
               >
                 {cat.label}
               </span>
@@ -111,10 +111,10 @@ export default function HomePage() {
       })}
 
       {/* About */}
-      <section className="bg-wt-forest text-white py-20 px-4">
+      <section className="bg-gradient-to-br from-wt-primary to-wt-hero-to text-white py-20 px-4">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-lg font-bold text-wt-amber mb-4">Wattlyについて</p>
-          <p className="text-green-200 leading-relaxed">
+          <p className="text-emerald-100 leading-relaxed">
             Wattlyは、電気料金や電力会社の選び方、太陽光・蓄電池など暮らしのエネルギーに関する情報をわかりやすくお届けするメディアです。
             電気に詳しくない方でも安心して判断できるよう、できるだけシンプルにまとめています。
           </p>

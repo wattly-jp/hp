@@ -1,21 +1,22 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-wt-bg: #f7faf8;
+  --color-wt-bg: #f0fdf4;
   --color-wt-surface: #ffffff;
-  --color-wt-surface-alt: #ecf5ee;
-  --color-wt-primary: #16a34a;
-  --color-wt-primary-light: #22c55e;
-  --color-wt-primary-dark: #15803d;
-  --color-wt-forest: #14532d;
-  --color-wt-header: #14532d;
+  --color-wt-surface-alt: #ecfdf5;
+  --color-wt-primary: #059669;
+  --color-wt-primary-light: #10b981;
+  --color-wt-primary-dark: #047857;
+  --color-wt-hero-from: #059669;
+  --color-wt-hero-to: #0d9488;
   --color-wt-emerald-50: #ecfdf5;
   --color-wt-amber: #f59e0b;
   --color-wt-amber-light: #fbbf24;
-  --color-wt-border: #d1e7d6;
-  --color-wt-text: #1a2e1f;
-  --color-wt-text-secondary: #4b6853;
-  --color-wt-text-muted: #7a9484;
+  --color-wt-sky: #0ea5e9;
+  --color-wt-border: #bbf7d0;
+  --color-wt-text: #064e3b;
+  --color-wt-text-secondary: #4b7a5e;
+  --color-wt-text-muted: #86b89a;
 }
 
 body {
@@ -48,7 +49,7 @@ body {
   font-weight: 700;
   margin-top: 2.5rem;
   margin-bottom: 1rem;
-  color: var(--color-wt-forest);
+  color: var(--color-wt-primary-dark);
   border-bottom: 2px solid var(--color-wt-border);
   padding-bottom: 0.5rem;
 }

@@ -9,9 +9,9 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 z-50 w-full bg-wt-forest/95 backdrop-blur border-b border-wt-forest">
+    <header className="fixed top-0 z-50 w-full bg-white/95 backdrop-blur border-b border-wt-border">
       <div className="mx-auto max-w-5xl flex items-center justify-between px-4 h-14">
-        <Link href="/" className="text-lg font-bold text-wt-amber">
+        <Link href="/" className="text-lg font-bold text-wt-primary">
           {BRAND.name}
         </Link>
         <nav className="hidden md:flex gap-6">
@@ -19,14 +19,14 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm text-green-200 hover:text-white transition-colors"
+              className="text-sm text-wt-text-secondary hover:text-wt-primary transition-colors"
             >
               {item.label}
             </Link>
           ))}
         </nav>
         <button
-          className="md:hidden text-green-200"
+          className="md:hidden text-wt-text"
           onClick={() => setOpen(!open)}
           aria-label="メニュー"
         >
@@ -34,12 +34,12 @@ export function Header() {
         </button>
       </div>
       {open && (
-        <nav className="md:hidden bg-wt-forest border-t border-green-800 px-4 pb-4">
+        <nav className="md:hidden bg-white border-t border-wt-border px-4 pb-4">
           {NAV_ITEMS.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="block py-2.5 text-sm text-green-200 hover:text-white"
+              className="block py-2.5 text-sm text-wt-text-secondary hover:text-wt-primary"
               onClick={() => setOpen(false)}
             >
               {item.label}
