@@ -13,7 +13,6 @@ const CATEGORY_ICONS: Record<string, typeof Scale> = {
 
 export default function HomePage() {
   const articles = getAllArticles();
-  const latest = articles.slice(0, 6);
   const categorized = CATEGORIES.map((cat) => ({
     ...cat,
     articles: articles.filter((a) => a.category === cat.slug).slice(0, 3),
@@ -58,32 +57,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* Latest Articles */}
-      {latest.length > 0 && (
-        <section className="py-16 px-4">
-          <div className="mx-auto max-w-4xl">
-            <div className="flex items-center gap-3 mb-8">
-              <div className="w-1 h-7 rounded-full bg-wt-primary" />
-              <h2 className="text-2xl font-bold text-wt-text">最新記事</h2>
-            </div>
-            <div className="grid md:grid-cols-3 gap-5">
-              {latest.map((a) => (
-                <ArticleCard key={a.slug} article={a} />
-              ))}
-            </div>
-            <div className="text-center mt-8">
-              <Link
-                href="/column"
-                className="inline-flex items-center gap-1 text-sm font-medium text-wt-primary hover:text-wt-primary-light transition-colors"
-              >
-                すべての記事を見る
-                <ArrowRight size={14} />
-              </Link>
-            </div>
-          </div>
-        </section>
-      )}
 
       {/* Categories */}
       {categorized.map((cat, i) => {
