@@ -51,6 +51,6 @@ export const HOKKAIDO_PLANS: PowerPlan[] = [
       { upToKwh: null, pricePerKwh: 43.88 },
     ],
     notes: "北海道ガスの都市ガス契約が必要。基本料金は同額で従量料金が安い",
-    officialUrl: "https://www.hokkaido-gas.co.jp/denki/",
+    officialUrl: "https://www.hokkaido-gas.co.jp/home/denki/menu/index.html",
   },
 ];
