@@ -4,7 +4,7 @@ import { BRAND, NAV_ITEMS } from "@/lib/constants";
 const ZH_SITES = [
   { name: "LunaPos", url: "https://lunapos.jp", desc: "ナイト業界向けPOS" },
   { name: "Casinohub", url: "https://casinohub.jp", desc: "カジノ向け管理SaaS" },
-  { name: "Roomly", url: "https://roomly.jp", desc: "賃貸管理SaaS" },
+  { name: "Roomly", url: "https://hp.roomly.jp", desc: "賃貸管理SaaS" },
 ];
 
 export function Footer() {
@@ -31,7 +31,7 @@ export function Footer() {
           </nav>
         </div>
         <div className="mt-8 pt-6 border-t border-emerald-700">
-          <p className="text-xs text-emerald-400 mb-2">zh運営サイト</p>
+          <p className="text-xs text-emerald-400 mb-2">zh グループ</p>
           <div className="flex flex-wrap gap-x-5 gap-y-1">
             {ZH_SITES.map((s) => (
               <a
