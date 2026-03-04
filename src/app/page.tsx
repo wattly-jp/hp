@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Zap, ArrowRight, Scale, Sun, Building2, BookOpen, Mail } from "lucide-react";
+import { Zap, ArrowRight, Calculator, Scale, Sun, Building2, BookOpen, Mail } from "lucide-react";
 import { getAllArticles } from "@/lib/media";
 import { ArticleCard } from "@/components/ArticleCard";
 import ContactForm from "@/components/ContactForm";
@@ -56,6 +56,31 @@ export default function HomePage() {
               </span>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Simulator CTA */}
+      <section className="py-14 px-4">
+        <div className="mx-auto max-w-4xl">
+          <Link
+            href="/simulator"
+            className="block rounded-2xl bg-gradient-to-r from-wt-primary/5 to-wt-sky/5 border border-wt-border p-8 hover:shadow-lg transition-all group"
+          >
+            <div className="flex items-center gap-4">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-wt-amber/10 text-wt-amber">
+                <Calculator size={24} />
+              </div>
+              <div className="flex-1">
+                <h2 className="text-lg font-bold text-wt-text group-hover:text-wt-primary transition-colors">
+                  電気料金シミュレーター
+                </h2>
+                <p className="text-sm text-wt-text-secondary">
+                  エリアと使用量を入力するだけ。最安の電力プランがすぐわかります。
+                </p>
+              </div>
+              <ArrowRight className="shrink-0 text-wt-text-muted group-hover:text-wt-primary transition-colors" />
+            </div>
+          </Link>
         </div>
       </section>
 

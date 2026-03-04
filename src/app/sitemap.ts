@@ -16,6 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     { url: BASE, lastModified: now, changeFrequency: "monthly", priority: 1 },
+    { url: `${BASE}/simulator`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE}/column`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     ...articlePages,
   ];

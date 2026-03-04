@@ -6,6 +6,7 @@ export const BRAND = {
 
 export const NAV_ITEMS = [
   { label: "ホーム", href: "/" },
+  { label: "料金シミュレーター", href: "/simulator" },
   { label: "コラム", href: "/column" },
 ];
 
