@@ -1,23 +1,12 @@
 import Link from "next/link";
-import { Zap, ArrowRight, Calculator, Scale, Sun, Building2, BookOpen, Mail } from "lucide-react";
+import { Zap, ArrowRight, Calculator, BookOpen, Mail } from "lucide-react";
 import { getAllArticles } from "@/lib/media";
 import { ArticleCard } from "@/components/ArticleCard";
 import ContactForm from "@/components/ContactForm";
 import { CATEGORIES } from "@/lib/constants";
 
-const CATEGORY_ICONS: Record<string, typeof Scale> = {
-  "比較・おすすめ": Scale,
-  "太陽光・蓄電池": Sun,
-  "法人向け": Building2,
-  "電力の基礎知識": BookOpen,
-};
-
 export default function HomePage() {
-  const articles = getAllArticles();
-  const categorized = CATEGORIES.map((cat) => ({
-    ...cat,
-    articles: articles.filter((a) => a.category === cat.slug).slice(0, 3),
-  })).filter((c) => c.articles.length > 0);
+  const articles = getAllArticles().slice(0, 3);
 
   return (
     <>
@@ -84,30 +73,33 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Categories */}
-      {categorized.map((cat, i) => {
-        const Icon = CATEGORY_ICONS[cat.slug] || BookOpen;
-        return (
-          <section
-            key={cat.slug}
-            className={`py-14 px-4 ${i % 2 === 0 ? "bg-wt-surface-alt" : ""}`}
-          >
-            <div className="mx-auto max-w-4xl">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-wt-primary/10 text-wt-primary">
-                  <Icon size={20} />
-                </div>
-                <h2 className="text-xl font-bold text-wt-text">{cat.label}</h2>
+      {/* Latest Articles */}
+      {articles.length > 0 && (
+        <section className="py-14 px-4 bg-wt-surface-alt">
+          <div className="mx-auto max-w-4xl">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-wt-primary/10 text-wt-primary">
+                <BookOpen size={20} />
               </div>
-              <div className="grid md:grid-cols-3 gap-5">
-                {cat.articles.map((a) => (
-                  <ArticleCard key={a.slug} article={a} />
-                ))}
-              </div>
+              <h2 className="text-xl font-bold text-wt-text">最新コラム</h2>
             </div>
-          </section>
-        );
-      })}
+            <div className="grid md:grid-cols-3 gap-5">
+              {articles.map((a) => (
+                <ArticleCard key={a.slug} article={a} />
+              ))}
+            </div>
+            <div className="text-center mt-8">
+              <Link
+                href="/column"
+                className="inline-flex items-center gap-2 text-wt-primary hover:text-wt-primary-dark font-semibold text-sm transition-colors"
+              >
+                コラム一覧を見る
+                <ArrowRight size={14} />
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Contact */}
       <section className="py-20 px-4 bg-wt-surface-alt">
