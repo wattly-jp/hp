@@ -24,6 +24,13 @@ export const metadata: Metadata = {
     siteName: "Wattly",
     locale: "ja_JP",
     type: "website",
+    url: "https://wattly.jp",
+  },
+  twitter: {
+    card: "summary",
+    title: "Wattly | 電気のこと、もっとわかりやすく。",
+    description:
+      "電力会社の選び方から太陽光・蓄電池まで、暮らしのエネルギー情報をわかりやすくお届けするメディアサイトです。",
   },
 };
 
