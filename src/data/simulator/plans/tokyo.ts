@@ -102,7 +102,7 @@ export const TOKYO_PLANS: PowerPlan[] = [
       { upToKwh: 300, pricePerKwh: 25.29 },
       { upToKwh: null, pricePerKwh: 27.44 },
     ],
-    notes: "実質再エネ100%。TEPCOより基本料金・従量料金ともに安い",
+    notes: "実質再エネ100%。基本料金・従量単価はTEPCOより安いが、燃料費調整額が高めの傾向あり",
     officialUrl: "https://octopusenergy.co.jp/green-octopus",
   },
 ];

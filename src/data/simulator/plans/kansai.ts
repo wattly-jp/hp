@@ -37,6 +37,6 @@ export const KANSAI_PLANS: PowerPlan[] = [
       { upToKwh: null, pricePerKwh: 27.72 },
     ],
     notes: "大阪ガスのガスセットプラン。最低料金・第1段階は関電と同額",
-    officialUrl: "https://denki.osakagas.co.jp/plan/base_a.html",
+    officialUrl: "https://home.osakagas.co.jp/energy/electricity/price/plan_ag/",
   },
 ];
