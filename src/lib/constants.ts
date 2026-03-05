@@ -9,6 +9,7 @@ export const NAV_ITEMS = [
   { label: "料金シミュレーター", href: "/simulator" },
   { label: "コラム", href: "/column" },
   { label: "よくある質問", href: "/faq" },
+  { label: "お問い合わせ", href: "/contact" },
 ];
 
 export const CATEGORIES = [

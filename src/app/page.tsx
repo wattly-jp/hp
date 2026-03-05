@@ -2,7 +2,6 @@ import Link from "next/link";
 import { Zap, ArrowRight, Calculator, BookOpen, Mail } from "lucide-react";
 import { getAllArticles } from "@/lib/media";
 import { ArticleCard } from "@/components/ArticleCard";
-import ContactForm from "@/components/ContactForm";
 import { CATEGORIES } from "@/lib/constants";
 
 export default function HomePage() {
@@ -103,16 +102,22 @@ export default function HomePage() {
 
       {/* Contact */}
       <section className="py-20 px-4 bg-wt-surface-alt">
-        <div className="mx-auto max-w-4xl text-center mb-10">
+        <div className="mx-auto max-w-4xl text-center">
           <div className="inline-flex items-center justify-center h-10 w-10 rounded-lg bg-wt-primary/10 text-wt-primary mb-4">
             <Mail size={20} />
           </div>
           <h2 className="text-xl font-bold text-wt-text mb-2">お問い合わせ</h2>
-          <p className="text-wt-text-secondary text-sm">
+          <p className="text-wt-text-secondary text-sm mb-6">
             記事に関するご質問や掲載のご相談など、お気軽にお問い合わせください。
           </p>
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-2 bg-wt-primary hover:bg-wt-primary-dark text-white font-bold px-8 py-3.5 rounded-xl transition-colors"
+          >
+            お問い合わせフォームへ
+            <ArrowRight size={16} />
+          </Link>
         </div>
-        <ContactForm />
       </section>
 
       {/* About */}
