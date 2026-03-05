@@ -106,16 +106,31 @@ export const TOKYO_PLANS: PowerPlan[] = [
     officialUrl: "https://octopusenergy.co.jp/",
   },
   {
+    // 2025年4月リニューアル後の料金体系
+    // 基本料金 = 実量制（287.09円/kW = 託送基本料金230.67円 + 容量拠出金56.42円）
+    // アンペア→kW換算: 10A≒1kW で近似
+    // 従量料金 = 固定従量料金15.28円/kWh（サービス料7円+託送従量8.28円）+ 電源料金（JEPX連動・平均約12〜13円/kWh）
     id: "looop-smart-time-one-tokyo",
     providerName: "Looopでんき",
     planName: "スマートタイムONE",
     isIncumbent: false,
     regionId: "tokyo",
-    basicCharge: { kind: "zero" },
+    basicCharge: {
+      kind: "per-amperage",
+      prices: {
+        10: 287.09,
+        15: 430.64,
+        20: 574.18,
+        30: 861.27,
+        40: 1148.36,
+        50: 1435.45,
+        60: 1722.54,
+      },
+    },
     consumptionTiers: [
       { upToKwh: null, pricePerKwh: 28.0 },
     ],
-    notes: "基本料金0円の市場連動型プラン。表示額は過去実績に基づく概算平均値です。実際の料金は30分ごとの市場価格で変動するため、季節・時間帯により大きく異なります",
+    notes: "市場連動型プラン。基本料金は実量制（10A≒1kWで換算した概算値）。従量単価は固定分15.28円+電源料金（JEPX平均）の概算で、実際は30分ごとに変動します",
     officialUrl: "https://looop-denki.com/",
   },
 ];
