@@ -28,7 +28,7 @@ export default function ContactForm() {
 
   if (status === "sent") {
     return (
-      <div className="mx-auto max-w-lg rounded-2xl bg-white p-10 text-center border border-wt-border">
+      <div className="mx-auto max-w-lg rounded-2xl bg-wt-surface p-10 text-center border border-wt-border">
         <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-wt-primary/10">
           <CheckCircle2 size={28} className="text-wt-primary" />
         </div>
@@ -47,18 +47,18 @@ export default function ContactForm() {
   }
 
   const inputClass =
-    "mt-1 w-full rounded-xl border border-wt-border px-4 py-2.5 text-sm transition-all focus:border-wt-primary focus:outline-none focus:ring-2 focus:ring-wt-primary/20";
+    "mt-1 w-full rounded-xl border border-wt-border bg-wt-surface px-4 py-2.5 text-sm text-wt-text transition-all focus:border-wt-primary focus:outline-none focus:ring-2 focus:ring-wt-primary/20";
 
   return (
     <form
       onSubmit={handleSubmit}
-      className="mx-auto max-w-lg rounded-2xl bg-white p-8 border border-wt-border"
+      className="mx-auto max-w-lg rounded-2xl bg-wt-surface p-8 border border-wt-border"
     >
       <div className="space-y-5">
         <div className="grid gap-5 sm:grid-cols-2">
           <div>
             <label className="block text-sm font-semibold text-wt-text">
-              お名前 <span className="text-red-500">*</span>
+              お名前 <span className="text-wt-danger">*</span>
             </label>
             <input
               type="text"
@@ -70,7 +70,7 @@ export default function ContactForm() {
           </div>
           <div>
             <label className="block text-sm font-semibold text-wt-text">
-              メールアドレス <span className="text-red-500">*</span>
+              メールアドレス <span className="text-wt-danger">*</span>
             </label>
             <input
               type="email"
@@ -83,7 +83,7 @@ export default function ContactForm() {
         </div>
         <div>
           <label className="block text-sm font-semibold text-wt-text">
-            お問い合わせ内容 <span className="text-red-500">*</span>
+            お問い合わせ内容 <span className="text-wt-danger">*</span>
           </label>
           <textarea
             required
@@ -96,7 +96,7 @@ export default function ContactForm() {
       </div>
 
       {status === "error" && (
-        <p className="mt-4 text-sm text-red-600">
+        <p className="mt-4 text-sm text-wt-danger">
           送信に失敗しました。時間をおいて再度お試しください。
         </p>
       )}

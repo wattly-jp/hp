@@ -21,7 +21,7 @@ export default function HomePage() {
             <br className="sm:hidden" />
             <span className="text-wt-amber">わかりやすく。</span>
           </h1>
-          <p className="text-emerald-100 text-lg max-w-xl mx-auto leading-relaxed">
+          <p className="text-wt-on-dark-muted text-lg max-w-xl mx-auto leading-relaxed">
             電力会社の選び方から太陽光・蓄電池まで、
             <br className="hidden md:block" />
             暮らしのエネルギー情報をお届けします。
@@ -29,7 +29,7 @@ export default function HomePage() {
           <div className="mt-8">
             <Link
               href="/column"
-              className="inline-flex items-center gap-2 bg-white hover:bg-emerald-50 text-wt-primary-dark font-bold px-8 py-3.5 rounded-xl shadow-lg transition-all hover:shadow-xl"
+              className="inline-flex items-center gap-2 bg-wt-surface hover:bg-wt-surface-alt text-wt-primary-dark font-bold px-8 py-3.5 rounded-xl shadow-lg transition-all hover:shadow-xl"
             >
               記事を読む
               <ArrowRight size={16} />
@@ -39,7 +39,7 @@ export default function HomePage() {
             {CATEGORIES.map((cat) => (
               <span
                 key={cat.slug}
-                className="text-xs px-3 py-1 rounded-full bg-white/15 text-emerald-100 backdrop-blur"
+                className="text-xs px-3 py-1 rounded-full bg-wt-on-dark/15 text-wt-on-dark-muted backdrop-blur"
               >
                 {cat.label}
               </span>
@@ -119,7 +119,7 @@ export default function HomePage() {
       <section className="bg-gradient-to-br from-wt-primary to-wt-hero-to text-white py-20 px-4">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-lg font-bold text-wt-amber mb-4">Wattlyについて</p>
-          <p className="text-emerald-100 leading-relaxed">
+          <p className="text-wt-on-dark-muted leading-relaxed">
             Wattlyは、電気料金や電力会社の選び方、太陽光・蓄電池など暮らしのエネルギーに関する情報をわかりやすくお届けするメディアです。
             電気に詳しくない方でも安心して判断できるよう、できるだけシンプルにまとめています。
           </p>

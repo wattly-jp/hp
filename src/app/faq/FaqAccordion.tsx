@@ -19,7 +19,7 @@ export function FaqAccordion({ items }: { items: FaqItem[] }) {
           >
             <button
               onClick={() => setOpenIndex(isOpen ? null : i)}
-              className="w-full flex items-center justify-between gap-3 px-5 py-4 text-left hover:bg-gray-50 transition-colors"
+              className="w-full flex items-center justify-between gap-3 px-5 py-4 text-left hover:bg-wt-surface-alt transition-colors"
             >
               <span className="font-semibold text-wt-text text-sm">
                 Q. {item.q}

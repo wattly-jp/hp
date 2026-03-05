@@ -48,11 +48,11 @@ export default function SimulatorPage() {
           <h1 className="text-3xl md:text-4xl font-bold leading-tight mb-4">
             電気料金
             <span className="text-wt-amber">シミュレーター</span>
-            <span className="ml-2 align-middle text-xs font-semibold bg-white/20 text-white px-2 py-0.5 rounded-full">
+            <span className="ml-2 align-middle text-xs font-semibold bg-wt-on-dark/20 text-wt-on-dark px-2 py-0.5 rounded-full">
               β版
             </span>
           </h1>
-          <p className="text-emerald-100 text-lg max-w-xl mx-auto leading-relaxed">
+          <p className="text-wt-on-dark-muted text-lg max-w-xl mx-auto leading-relaxed">
             エリアと使用量を選ぶだけで、
             <br className="hidden md:block" />
             各電力会社の月額料金を比較できます。

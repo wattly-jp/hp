@@ -13,9 +13,9 @@ export default function ColumnPage() {
 
   return (
     <>
-      <section className="pt-28 pb-12 px-4 bg-gradient-to-br from-wt-forest to-[#1a4731] text-white text-center">
+      <section className="pt-28 pb-12 px-4 bg-gradient-to-br from-wt-forest to-wt-forest-deep text-wt-on-dark text-center">
         <h1 className="text-3xl font-bold mb-2">コラム</h1>
-        <p className="text-green-200">
+        <p className="text-wt-on-dark-muted">
           暮らしのエネルギーに関する情報をわかりやすくお届けします。
         </p>
       </section>

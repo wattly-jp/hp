@@ -28,7 +28,7 @@ export function ProviderCard({ result, rank }: ProviderCardProps) {
           </p>
         </div>
         {plan.isIncumbent && (
-          <span className="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">
+          <span className="text-xs bg-wt-surface-alt text-wt-text-secondary px-2 py-0.5 rounded-full">
             大手電力
           </span>
         )}
@@ -58,7 +58,7 @@ export function ProviderCard({ result, rank }: ProviderCardProps) {
 
       {/* 節約バッジ */}
       {plan.isIncumbent ? (
-        <p className="text-xs text-gray-500 mb-3">比較基準（大手電力）</p>
+        <p className="text-xs text-wt-text-muted mb-3">比較基準（大手電力）</p>
       ) : annualSavings < 0 ? (
         <p className="inline-block text-xs font-bold text-wt-primary bg-wt-primary/10 px-3 py-1 rounded-full mb-3">
           年間 ¥{Math.abs(annualSavings).toLocaleString()} おトク
