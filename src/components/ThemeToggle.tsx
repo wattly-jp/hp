@@ -19,15 +19,35 @@ export function ThemeToggle() {
     localStorage.setItem("theme", next ? "dark" : "light");
   };
 
-  if (!mounted) return <div className="w-8 h-8" />;
+  if (!mounted) return <div className="w-14 h-7" />;
 
   return (
     <button
+      type="button"
       onClick={toggle}
+      className="relative inline-flex items-center w-14 h-7 rounded-full transition-colors duration-300 focus:outline-none cursor-pointer"
+      style={{
+        backgroundColor: dark
+          ? "var(--color-wt-border)"
+          : "rgba(5, 150, 105, 0.2)",
+      }}
       aria-label={dark ? "ライトモードに切替" : "ダークモードに切替"}
-      className="p-1.5 rounded-md text-wt-text-secondary hover:text-wt-primary transition-colors"
     >
-      {dark ? <Sun size={18} /> : <Moon size={18} />}
+      <span
+        className="absolute left-1 flex items-center justify-center w-5 h-5 rounded-full shadow-sm transition-transform duration-300"
+        style={{
+          transform: dark ? "translateX(0)" : "translateX(28px)",
+          backgroundColor: dark
+            ? "var(--color-wt-text-muted)"
+            : "var(--color-wt-primary)",
+        }}
+      >
+        {dark ? (
+          <Moon className="w-3 h-3 text-white" />
+        ) : (
+          <Sun className="w-3 h-3 text-white" />
+        )}
+      </span>
     </button>
   );
 }
