@@ -105,4 +105,17 @@ export const TOKYO_PLANS: PowerPlan[] = [
     notes: "実質再エネ100%。基本料金・従量単価はTEPCOより安いが、燃料費調整額が高めの傾向あり",
     officialUrl: "https://octopusenergy.co.jp/",
   },
+  {
+    id: "looop-smart-time-one-tokyo",
+    providerName: "Looopでんき",
+    planName: "スマートタイムONE",
+    isIncumbent: false,
+    regionId: "tokyo",
+    basicCharge: { kind: "zero" },
+    consumptionTiers: [
+      { upToKwh: null, pricePerKwh: 28.0 },
+    ],
+    notes: "基本料金0円の市場連動型プラン。表示額は過去実績に基づく概算平均値です。実際の料金は30分ごとの市場価格で変動するため、季節・時間帯により大きく異なります",
+    officialUrl: "https://looop-denki.com/",
+  },
 ];
