@@ -5,7 +5,7 @@
 > **クラスター**: 1（比較・おすすめ）
 > **ターゲット**: 電力会社の乗り換えに興味はあるが「面倒そう」で踏み出せない人
 > **タグ**: #乗り換え #手続き #電気代
-> **内部リンク先**: `best-power-company-single` / `new-power-demerits` / `electricity-bill-structure`
+> **内部リンク先**: `best-power-company-single` / `new-power-demerits` / `electricity-bill-structure` / `electricity-liberalization-10years`
 
 ---
 

@@ -5,7 +5,7 @@
 > **クラスター**: 5（電力の基礎知識）
 > **ターゲット**: 新電力への乗り換えを検討している人
 > **タグ**: #新電力 #デメリット #基礎知識
-> **内部リンク先**: `electricity-bill-structure` / `best-power-company-single` / `power-liberalization-guide`
+> **内部リンク先**: `electricity-bill-structure` / `best-power-company-single` / `power-liberalization-guide` / `japan-energy-mix-future` / `hormuz-strait-electricity-impact` / `electricity-liberalization-10years`
 
 ---
 
@@ -23,7 +23,7 @@
 
 ### 何が問題なのか
 
-燃料価格が高騰すると、市場連動型の電力会社では燃料費調整額が青天井で上がります。2022年〜2023年にかけて、燃料費調整だけで月数千円の上乗せになったケースがありました。
+燃料価格が高騰すると、市場連動型の電力会社では燃料費調整額が青天井で上がります。2022年〜2023年にかけて、燃料費調整だけで月数千円の上乗せになったケースがありました。2026年のホルムズ海峡問題でも同様のリスクが顕在化しています（詳しくは `japan-energy-mix-future` を参照）。
 
 基本料金や従量料金が安くても、燃料費調整で逆転されることがある。これが新電力の最大の落とし穴です。
 

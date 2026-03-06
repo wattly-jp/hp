@@ -5,7 +5,7 @@
 > **クラスター**: 3（法人向け）
 > **ターゲット**: 法人の電気代削減を検討している経営者・管理部門
 > **タグ**: #法人 #電気代削減 #コスト削減
-> **内部リンク先**: `electricity-bill-structure` / `solar-panel-worth-it` / `power-liberalization-guide`
+> **内部リンク先**: `electricity-bill-structure` / `solar-panel-worth-it` / `power-liberalization-guide` / `japan-energy-mix-future`
 
 ---
 

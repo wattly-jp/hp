@@ -5,7 +5,7 @@
 > **クラスター**: 2（太陽光・蓄電池）
 > **ターゲット**: 太陽光パネルの導入を検討している住宅オーナー
 > **タグ**: #太陽光 #費用 #元取れるか
-> **内部リンク先**: `electricity-bill-structure` / `home-battery-guide` / `renewable-surcharge-guide`
+> **内部リンク先**: `electricity-bill-structure` / `home-battery-guide` / `renewable-surcharge-guide` / `japan-energy-mix-future` / `summer-electricity-cost-2026`
 
 ---
 
@@ -188,7 +188,7 @@ FITの10年が終了すると（卒FIT）、売電単価は7〜9円/kWh程度に
 
 まずは複数の業者から見積もりを取って、自分の家の条件でシミュレーションしてもらうのが最も確実な判断方法です。
 
-「元が取れるか」ばかりに目が行きがちですが、停電時の備え、CO2削減への貢献、電気代の値上がりリスクのヘッジなど、金銭以外のメリットも含めて総合的に判断してみてください。
+「元が取れるか」ばかりに目が行きがちですが、停電時の備え、CO2削減への貢献、電気代の値上がりリスクのヘッジなど、金銭以外のメリットも含めて総合的に判断してみてください。日本のエネルギー政策の方向性については `japan-energy-mix-future` で解説しています。
 
 ---
 

@@ -5,7 +5,7 @@
 > **クラスター**: 5（電力の基礎知識）
 > **ターゲット**: 電気料金の内訳を知りたい一般消費者
 > **タグ**: #基礎知識 #再エネ賦課金 #制度
-> **内部リンク先**: `electricity-bill-structure` / `solar-panel-worth-it` / `power-liberalization-guide`
+> **内部リンク先**: `electricity-bill-structure` / `solar-panel-worth-it` / `power-liberalization-guide` / `japan-energy-mix-future` / `datacenter-power-demand` / `gx-ets-electricity-impact`
 
 ---
 
@@ -100,7 +100,7 @@ FIT制度で42円/kWhの高単価で契約された太陽光の買取期間は20
 - **2030年以降**: 徐々に低下
 - **2040年頃**: 大幅に低下する可能性
 
-ただし、新たな再エネ支援制度が導入されれば、負担が続く可能性もあります。
+ただし、新たな再エネ支援制度が導入されれば、負担が続く可能性もあります。今後のエネルギーミックス全体の方向性については `japan-energy-mix-future` で詳しく解説しています。
 
 ### FIP制度への移行
 
