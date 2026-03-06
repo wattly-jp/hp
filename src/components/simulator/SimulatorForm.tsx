@@ -46,6 +46,28 @@ export function SimulatorForm() {
   const handleSimulate = () => {
     if (!region) return;
     setShowResults(true);
+
+    // シミュレーション結果をログ保存（バックグラウンド）
+    const simResults = simulateAll(region, effectiveKwh, amperage);
+    const incumbentResult = simResults.find((r) => r.plan.isIncumbent);
+    fetch("/api/simulation-log", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        region,
+        kwhPerMonth: effectiveKwh,
+        amperage,
+        inputMode: inputMode,
+        presetId: inputMode === "preset" ? presetId : null,
+        topProvider: simResults[0]?.plan.providerName,
+        topCost: simResults[0]?.monthlyCost,
+        incumbentCost: incumbentResult?.monthlyCost ?? null,
+        savings: incumbentResult
+          ? incumbentResult.monthlyCost - simResults[0]?.monthlyCost
+          : null,
+        resultCount: simResults.length,
+      }),
+    }).catch(() => {}); // 失敗は無視
   };
 
   return (
