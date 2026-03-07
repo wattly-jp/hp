@@ -6,6 +6,13 @@ export const metadata: Metadata = {
   title: "コラム",
   description:
     "電力会社の選び方、電気代の節約、太陽光・蓄電池など暮らしのエネルギーに関する記事をまとめています。",
+  alternates: { canonical: "/column" },
+  openGraph: {
+    title: "コラム",
+    description:
+      "電力会社の選び方、電気代の節約、太陽光・蓄電池など暮らしのエネルギーに関する記事をまとめています。",
+    url: "https://wattly.jp/column",
+  },
 };
 
 export default function ColumnPage() {

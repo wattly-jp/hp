@@ -6,6 +6,13 @@ export const metadata: Metadata = {
   title: "よくある質問",
   description:
     "電気料金の仕組みや電力会社の乗り換えについて、よくある質問をまとめました。kWhとは？新電力は停電しやすい？賃貸でも乗り換えできる？など、気になる疑問にお答えします。",
+  alternates: { canonical: "/faq" },
+  openGraph: {
+    title: "よくある質問",
+    description:
+      "電気料金の仕組みや電力会社の乗り換えについて、よくある質問をまとめました。",
+    url: "https://wattly.jp/faq",
+  },
 };
 
 const sections = [
@@ -91,8 +98,27 @@ const sections = [
 ];
 
 export default function FaqPage() {
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: sections.flatMap((section) =>
+      section.items.map((item) => ({
+        "@type": "Question",
+        name: item.q,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: item.a,
+        },
+      }))
+    ),
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <section className="pt-28 pb-12 px-4 bg-gradient-to-br from-wt-forest to-wt-forest-deep text-wt-on-dark text-center">
         <h1 className="text-3xl font-bold mb-2">よくある質問</h1>
         <p className="text-wt-on-dark-muted">

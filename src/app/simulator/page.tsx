@@ -7,10 +7,12 @@ export const metadata: Metadata = {
   title: `電気料金シミュレーター｜電力会社を比較 - ${BRAND.name}`,
   description:
     "お住まいのエリアと使用量を入力するだけで、各電力会社の月額料金を比較できます。最安プランが一目でわかる無料シミュレーター。",
+  alternates: { canonical: "/simulator" },
   openGraph: {
     title: "電気料金シミュレーター｜電力会社を比較",
     description:
       "エリアと使用量で電力会社の料金を比較。最安プランが一目でわかります。",
+    url: "https://wattly.jp/simulator",
     type: "website",
   },
 };

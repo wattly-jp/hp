@@ -20,6 +20,9 @@ export const metadata: Metadata = {
   },
   description:
     "電力会社の選び方から太陽光・蓄電池まで、暮らしのエネルギー情報をわかりやすくお届けするメディアサイトです。",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     siteName: "Wattly",
     locale: "ja_JP",
@@ -56,6 +59,24 @@ export default function RootLayout({
         </Script>
       </head>
       <body className={`${notoSansJP.className} antialiased`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Wattly",
+              url: "https://wattly.jp",
+              description:
+                "電力会社の選び方から太陽光・蓄電池まで、暮らしのエネルギー情報をわかりやすくお届けするメディアサイトです。",
+              publisher: {
+                "@type": "Organization",
+                name: "Wattly",
+                url: "https://wattly.jp",
+              },
+            }),
+          }}
+        />
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />

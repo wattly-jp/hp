@@ -16,9 +16,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const article = getArticle(slug);
   if (!article) return {};
+  const url = `https://wattly.jp/column/${slug}`;
   return {
     title: article.title,
     description: article.description,
+    alternates: { canonical: `/column/${slug}` },
+    openGraph: {
+      title: article.title,
+      description: article.description,
+      url,
+      type: "article",
+      publishedTime: article.date || undefined,
+    },
   };
 }
 
@@ -27,7 +36,34 @@ export default async function ArticlePage({ params }: Props) {
   const article = getArticle(slug);
   if (!article) notFound();
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: article.title,
+    description: article.description,
+    datePublished: article.date || undefined,
+    author: {
+      "@type": "Organization",
+      name: "Wattly",
+      url: "https://wattly.jp",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Wattly",
+      url: "https://wattly.jp",
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://wattly.jp/column/${slug}`,
+    },
+  };
+
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     <section className="pt-24 pb-16 px-4">
       <article className="mx-auto max-w-3xl">
         <Link
@@ -60,5 +96,6 @@ export default async function ArticlePage({ params }: Props) {
         </div>
       </article>
     </section>
+    </>
   );
 }
