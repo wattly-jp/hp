@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     url: "https://wattly.jp",
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Wattly | 電気のこと、もっとわかりやすく。",
     description:
       "電力会社の選び方から太陽光・蓄電池まで、暮らしのエネルギー情報をわかりやすくお届けするメディアサイトです。",
