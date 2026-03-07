@@ -5,6 +5,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
 import { getArticle, getAllSlugs } from "@/lib/media";
 import { notFound } from "next/navigation";
+import Comments from "@/components/Comments";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -123,6 +124,7 @@ export default async function ArticlePage({ params }: Props) {
         <div className="prose-wt">
           <MDXRemote source={article.content} options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }} />
         </div>
+        <Comments project="wattly" articleSlug={slug} />
       </article>
     </section>
     </>
