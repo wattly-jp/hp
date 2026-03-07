@@ -58,11 +58,40 @@ export default async function ArticlePage({ params }: Props) {
     },
   };
 
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "トップ",
+        item: "https://wattly.jp",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "コラム",
+        item: "https://wattly.jp/column",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: article.title,
+        item: `https://wattly.jp/column/${slug}`,
+      },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
     <section className="pt-24 pb-16 px-4">
       <article className="mx-auto max-w-3xl">
