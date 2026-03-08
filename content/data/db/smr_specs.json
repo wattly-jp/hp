@@ -1,0 +1,191 @@
+[
+  {
+    "id": "conventional_reactor",
+    "category": "reactor_comparison",
+    "type": "conventional",
+    "type_ja": "従来の大型原子炉",
+    "output_kw": 1000000,
+    "output_note": "100万kW級",
+    "construction_method": "現地で一から建設",
+    "construction_period_years_min": 10,
+    "construction_period_note": "それ以上かかることもある",
+    "construction_cost_jpy_note": "1兆円規模",
+    "construction_cost_jpy_order": 1000000000000,
+    "site_requirement": "広大な用地が必要",
+    "scalability": "計画段階で規模を決定",
+    "currency": "JPY",
+    "last_verified": "2026-03-08",
+    "source_article": "what-is-smr"
+  },
+  {
+    "id": "smr_general",
+    "category": "reactor_comparison",
+    "type": "smr",
+    "type_ja": "SMR（小型モジュール炉）",
+    "output_kw_max": 300000,
+    "output_note": "30万kW以下",
+    "construction_method": "工場でモジュール製造 → 現地で組み立て",
+    "construction_period_note": "数年を想定",
+    "construction_cost_jpy_note": "数千億円規模",
+    "site_requirement": "既存の火力発電所跡地にも設置可能",
+    "scalability": "需要に応じて1基ずつ追加できる",
+    "currency": "JPY",
+    "last_verified": "2026-03-08",
+    "source_article": "what-is-smr"
+  },
+  {
+    "id": "nuscale_cost_estimate",
+    "category": "cost_estimate",
+    "company": "NuScale Power",
+    "country": "US",
+    "estimated_cost_jpy_per_kwh": 9,
+    "cost_note": "約9円/kWh前後（NuScale社の試算）",
+    "estimated": true,
+    "note": "2026年3月時点で商用運転を開始したSMRは世界にまだない。実際のコストは不透明",
+    "currency": "JPY",
+    "last_verified": "2026-03-08",
+    "source_article": "what-is-smr"
+  },
+  {
+    "id": "smr_project_nuscale",
+    "category": "smr_project",
+    "company": "NuScale Power",
+    "country": "US",
+    "reactor_type": "軽水炉型",
+    "feature": "唯一NRC（米国原子力規制委員会）の設計認証を取得済み",
+    "commercial_target_year": 2029,
+    "last_verified": "2026-03-08",
+    "source_article": "what-is-smr"
+  },
+  {
+    "id": "smr_project_terrapower",
+    "category": "smr_project",
+    "company": "TerraPower",
+    "country": "US",
+    "reactor_type": "ナトリウム冷却高速炉",
+    "feature": "ビル・ゲイツが出資",
+    "commercial_target_year": 2030,
+    "last_verified": "2026-03-08",
+    "source_article": "what-is-smr"
+  },
+  {
+    "id": "smr_project_kairos",
+    "category": "smr_project",
+    "company": "Kairos Power",
+    "country": "US",
+    "reactor_type": "溶融塩冷却",
+    "feature": "Googleが電力購入契約を締結",
+    "commercial_target_year_decade": 2030,
+    "last_verified": "2026-03-08",
+    "source_article": "what-is-smr"
+  },
+  {
+    "id": "smr_project_ge_hitachi",
+    "category": "smr_project",
+    "company": "GE日立",
+    "country": "US/JP",
+    "reactor_type": "BWRX-300（軽水炉型）",
+    "feature": "カナダで導入計画",
+    "commercial_target_year_decade": 2030,
+    "last_verified": "2026-03-08",
+    "source_article": "what-is-smr"
+  },
+  {
+    "id": "smr_project_rosatom",
+    "category": "smr_project",
+    "company": "ロスアトム",
+    "country": "RU",
+    "reactor_type": "浮体式原子力発電所",
+    "feature": "「アカデミック・ロモノソフ」2020年に稼働済み（ただし小型炉の扱い）",
+    "commercial_operation_year": 2020,
+    "last_verified": "2026-03-08",
+    "source_article": "what-is-smr"
+  },
+  {
+    "id": "japan_smr_ihi",
+    "category": "japan_smr_involvement",
+    "company": "IHI",
+    "role": "NuScale社のSMR向けモジュールを製造",
+    "note": "ルーマニアでのプロジェクトでモックアップが完成",
+    "last_verified": "2026-03-08",
+    "source_article": "what-is-smr"
+  },
+  {
+    "id": "japan_smr_mhi",
+    "category": "japan_smr_involvement",
+    "company": "三菱重工",
+    "role": "独自のSMR設計に加え、超小型炉（マイクロ炉）も開発中",
+    "micro_reactor_diameter_m": 1,
+    "micro_reactor_length_m": 2,
+    "fuel_replacement_interval_years": 25,
+    "fuel_note": "25年間燃料交換不要を目標",
+    "last_verified": "2026-03-08",
+    "source_article": "what-is-smr"
+  },
+  {
+    "id": "japan_smr_jsw",
+    "category": "japan_smr_involvement",
+    "company": "日本製鋼所",
+    "role": "原子炉容器の大型鍛造品で世界トップクラスの技術を保有",
+    "last_verified": "2026-03-08",
+    "source_article": "what-is-smr"
+  },
+  {
+    "id": "japan_smr_timeline",
+    "category": "timeline",
+    "description": "経済産業省の目標: 2030年代に建設開始、2040年代に運転開始",
+    "construction_start_decade": "2030s",
+    "operation_start_decade": "2040s",
+    "note": "2026年3月時点で日本国内で建設が決まったSMRはまだない",
+    "last_verified": "2026-03-08",
+    "source_article": "what-is-smr"
+  },
+  {
+    "id": "datacenter_power_demand",
+    "category": "demand_forecast",
+    "description": "世界のデータセンターの電力消費量は2026年に2022年比で約2.2倍（IEA試算）",
+    "base_year": 2022,
+    "target_year": 2026,
+    "growth_multiplier": 2.2,
+    "data_source": "IEA",
+    "last_verified": "2026-03-08",
+    "source_article": "what-is-smr"
+  },
+  {
+    "id": "google_smr_ppa",
+    "category": "tech_company_investment",
+    "company": "Google",
+    "partner": "Kairos Power",
+    "description": "世界初のSMR-PPA（電力購入契約）",
+    "last_verified": "2026-03-08",
+    "source_article": "what-is-smr"
+  },
+  {
+    "id": "microsoft_smr",
+    "category": "tech_company_investment",
+    "company": "Microsoft",
+    "description": "スリーマイル島原発の再稼働を支援",
+    "last_verified": "2026-03-08",
+    "source_article": "what-is-smr"
+  },
+  {
+    "id": "energy_plan_7th",
+    "category": "policy",
+    "description": "第7次エネルギー基本計画でSMRに言及",
+    "decision_date": "2025-02",
+    "decision_note": "2025年2月閣議決定",
+    "last_verified": "2026-03-08",
+    "source_article": "what-is-smr"
+  },
+  {
+    "id": "crude_oil_middle_east",
+    "category": "energy_security",
+    "description": "日本が輸入する原油の約9割は中東経由",
+    "middle_east_share_percent": 90,
+    "middle_east_share_note": "約9割",
+    "estimated": true,
+    "risk": "ホルムズ海峡封鎖リスク",
+    "last_verified": "2026-03-08",
+    "source_article": "what-is-smr"
+  }
+]
