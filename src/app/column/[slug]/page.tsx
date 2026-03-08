@@ -28,6 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url,
       type: "article",
       publishedTime: article.date || undefined,
+      modifiedTime: article.lastModified || article.date,
     },
   };
 }
@@ -43,6 +44,7 @@ export default async function ArticlePage({ params }: Props) {
     headline: article.title,
     description: article.description,
     datePublished: article.date || undefined,
+    dateModified: article.lastModified || article.date,
     author: {
       "@type": "Organization",
       name: "Wattly",
@@ -57,6 +59,7 @@ export default async function ArticlePage({ params }: Props) {
       "@type": "WebPage",
       "@id": `https://wattly.jp/column/${slug}`,
     },
+    ...(article.tags.length > 0 ? { keywords: article.tags.join(", ") } : {}),
   };
 
   const breadcrumbLd = {
@@ -104,7 +107,7 @@ export default async function ArticlePage({ params }: Props) {
           コラム一覧へ
         </Link>
         <p className="text-xs text-wt-text-muted mb-2">
-          {article.date} ・ {article.category}
+          {article.date}{article.lastModified && article.lastModified !== article.date && `（更新: ${article.lastModified}）`} ・ {article.category}
         </p>
         <h1 className="text-2xl md:text-3xl font-bold text-wt-text mb-6">
           {article.title}
