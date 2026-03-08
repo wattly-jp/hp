@@ -1,24 +1,45 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { getArticlesByPage, getTotalPages } from "@/lib/media";
 import { ArticleCard } from "@/components/ArticleCard";
 import { Pagination } from "@/components/Pagination";
 
-export const metadata: Metadata = {
-  title: "コラム",
-  description:
-    "電力会社の選び方、電気代の節約、太陽光・蓄電池など暮らしのエネルギーに関する記事をまとめています。",
-  alternates: { canonical: "/column" },
-  openGraph: {
-    title: "コラム",
+interface Props {
+  params: Promise<{ num: string }>;
+}
+
+export async function generateStaticParams() {
+  const totalPages = getTotalPages();
+  return Array.from({ length: totalPages }, (_, i) => ({
+    num: String(i + 1),
+  })).filter((p) => p.num !== "1");
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { num } = await params;
+  const page = parseInt(num, 10);
+  return {
+    title: `コラム（${page}ページ目）`,
     description:
       "電力会社の選び方、電気代の節約、太陽光・蓄電池など暮らしのエネルギーに関する記事をまとめています。",
-    url: "https://wattly.jp/column",
-  },
-};
+    alternates: { canonical: `/column/page/${page}` },
+  };
+}
 
-export default function ColumnPage() {
-  const articles = getArticlesByPage(1);
+export default async function ColumnPaginatedPage({ params }: Props) {
+  const { num } = await params;
+  const page = parseInt(num, 10);
   const totalPages = getTotalPages();
+
+  if (isNaN(page) || page < 1 || page > totalPages) {
+    notFound();
+  }
+
+  if (page === 1) {
+    notFound();
+  }
+
+  const articles = getArticlesByPage(page);
 
   return (
     <>
@@ -39,7 +60,7 @@ export default function ColumnPage() {
                   <ArticleCard key={a.slug} article={a} />
                 ))}
               </div>
-              <Pagination currentPage={1} totalPages={totalPages} />
+              <Pagination currentPage={page} totalPages={totalPages} />
             </>
           )}
         </div>

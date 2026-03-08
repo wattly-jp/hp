@@ -74,3 +74,16 @@ export function getAllTags(): string[] {
   articles.forEach((a) => a.tags.forEach((t) => tagSet.add(t)));
   return Array.from(tagSet).sort();
 }
+
+export const ARTICLES_PER_PAGE = 12;
+
+export function getTotalPages(): number {
+  const total = getAllArticles().length;
+  return Math.max(1, Math.ceil(total / ARTICLES_PER_PAGE));
+}
+
+export function getArticlesByPage(page: number): Article[] {
+  const all = getAllArticles();
+  const start = (page - 1) * ARTICLES_PER_PAGE;
+  return all.slice(start, start + ARTICLES_PER_PAGE);
+}
