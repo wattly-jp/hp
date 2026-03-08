@@ -1,0 +1,155 @@
+[
+  {
+    "id": "basic_charge_ampere_20a",
+    "category": "basic_charge",
+    "subcategory": "ampere",
+    "provider": "tokyo_electric",
+    "contract_ampere": 20,
+    "description": "一人暮らし（あまり使わない方）",
+    "price_jpy": 624,
+    "price_note": "約624円",
+
+    "region": "tokyo",
+    "last_verified": "2026-03-08",
+    "source_article": "electricity-bill-structure"
+  },
+  {
+    "id": "basic_charge_ampere_30a",
+    "category": "basic_charge",
+    "subcategory": "ampere",
+    "provider": "tokyo_electric",
+    "contract_ampere": 30,
+    "description": "一人暮らし〜二人暮らし",
+    "price_jpy": 935,
+    "price_note": "約935円",
+
+    "region": "tokyo",
+    "last_verified": "2026-03-08",
+    "source_article": "electricity-bill-structure"
+  },
+  {
+    "id": "basic_charge_ampere_40a",
+    "category": "basic_charge",
+    "subcategory": "ampere",
+    "provider": "tokyo_electric",
+    "contract_ampere": 40,
+    "description": "ファミリー",
+    "price_jpy": 1247,
+    "price_note": "約1,247円",
+
+    "region": "tokyo",
+    "last_verified": "2026-03-08",
+    "source_article": "electricity-bill-structure"
+  },
+  {
+    "id": "basic_charge_ampere_50a",
+    "category": "basic_charge",
+    "subcategory": "ampere",
+    "provider": "tokyo_electric",
+    "contract_ampere": 50,
+    "description": "大家族・オール電化",
+    "price_jpy": 1559,
+    "price_note": "約1,559円",
+
+    "region": "tokyo",
+    "last_verified": "2026-03-08",
+    "source_article": "electricity-bill-structure"
+  },
+  {
+    "id": "basic_charge_ampere_60a",
+    "category": "basic_charge",
+    "subcategory": "ampere",
+    "provider": "tokyo_electric",
+    "contract_ampere": 60,
+    "description": "電気をよく使う家庭",
+    "price_jpy": 1871,
+    "price_note": "約1,871円",
+
+    "region": "tokyo",
+    "last_verified": "2026-03-08",
+    "source_article": "electricity-bill-structure"
+  },
+  {
+    "id": "tiered_rate_stage1_tepco",
+    "category": "usage_charge",
+    "subcategory": "tiered_rate",
+    "provider": "tokyo_electric",
+    "stage": 1,
+    "usage_range_kwh_min": 0,
+    "usage_range_kwh_max": 120,
+    "unit_price_jpy_per_kwh": 29.80,
+    "price_note": "約29.80円/kWh",
+
+    "region": "tokyo",
+    "last_verified": "2026-03-08",
+    "source_article": "electricity-bill-structure"
+  },
+  {
+    "id": "tiered_rate_stage2_tepco",
+    "category": "usage_charge",
+    "subcategory": "tiered_rate",
+    "provider": "tokyo_electric",
+    "stage": 2,
+    "usage_range_kwh_min": 120,
+    "usage_range_kwh_max": 300,
+    "unit_price_jpy_per_kwh": 36.40,
+    "price_note": "約36.40円/kWh",
+
+    "region": "tokyo",
+    "last_verified": "2026-03-08",
+    "source_article": "electricity-bill-structure"
+  },
+  {
+    "id": "tiered_rate_stage3_tepco",
+    "category": "usage_charge",
+    "subcategory": "tiered_rate",
+    "provider": "tokyo_electric",
+    "stage": 3,
+    "usage_range_kwh_min": 300,
+    "usage_range_kwh_max": null,
+    "unit_price_jpy_per_kwh": 40.49,
+    "price_note": "約40.49円/kWh",
+
+    "region": "tokyo",
+    "last_verified": "2026-03-08",
+    "source_article": "electricity-bill-structure"
+  },
+  {
+    "id": "fuel_cost_adjustment",
+    "category": "bill_component",
+    "component": "fuel_cost_adjustment",
+    "name_ja": "燃料費調整額",
+    "description": "火力発電に使う燃料（天然ガス・石炭・原油）の価格変動を反映する調整額。毎月変動",
+    "note": "大手電力は上限ありの場合が多い。新電力の一部は上限なし。市場連動型はJEPXの取引価格に連動し30分ごとに単価が変わる",
+    "last_verified": "2026-03-08",
+    "source_article": "electricity-bill-structure"
+  },
+  {
+    "id": "renewable_energy_surcharge",
+    "category": "bill_component",
+    "component": "renewable_energy_surcharge",
+    "name_ja": "再生可能エネルギー発電促進賦課金（再エネ賦課金）",
+    "description": "再生可能エネルギーの普及を支えるために全消費者が負担する費用",
+    "note": "全国一律の単価。どの電力会社でも同じ。毎年度、国が単価を決定。電力会社を変えても金額は変わらない",
+    "last_verified": "2026-03-08",
+    "source_article": "electricity-bill-structure"
+  },
+  {
+    "id": "ampere_regions",
+    "category": "system_info",
+    "subcategory": "ampere_system",
+    "description": "アンペア制を採用している地域",
+    "regions": ["hokkaido", "tohoku", "tokyo", "chubu", "hokuriku", "kyushu"],
+    "last_verified": "2026-03-08",
+    "source_article": "electricity-bill-structure"
+  },
+  {
+    "id": "minimum_charge_regions",
+    "category": "system_info",
+    "subcategory": "minimum_charge_system",
+    "description": "最低料金制を採用している地域",
+    "regions": ["kansai", "chugoku", "shikoku", "okinawa"],
+    "last_verified": "2026-03-08",
+    "source_article": "electricity-bill-structure"
+  }
+]
