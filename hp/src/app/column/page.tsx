@@ -29,12 +29,12 @@ export default function ColumnPage() {
         </p>
       </section>
       <section className="py-14 px-4">
-        <div className="mx-auto max-w-4xl">
+        <div className="mx-auto max-w-2xl">
           {articles.length === 0 ? (
             <p className="text-wt-text-muted">記事はまだありません。</p>
           ) : (
             <>
-              <div className="grid md:grid-cols-2 gap-5">
+              <div className="grid gap-4">
                 {articles.map((a) => (
                   <ArticleCard key={a.slug} article={a} />
                 ))}

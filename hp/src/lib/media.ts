@@ -78,7 +78,7 @@ export function getAllTags(): string[] {
   return Array.from(tagSet).sort();
 }
 
-export const ARTICLES_PER_PAGE = 12;
+export const ARTICLES_PER_PAGE = 8;
 
 export function getTotalPages(): number {
   const total = getAllArticles().length;
