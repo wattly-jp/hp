@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `コラム（${page}ページ目）`,
     description:
       "電力会社の選び方、電気代の節約、太陽光・蓄電池など暮らしのエネルギーに関する記事をまとめています。",
-    alternates: { canonical: `/column/page/${page}` },
+    alternates: { canonical: `https://wattly.jp/column/page/${page}` },
   };
 }
 

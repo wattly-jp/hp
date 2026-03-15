@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "よくある質問",
   description:
     "電気料金の仕組みや電力会社の乗り換えについて、よくある質問をまとめました。kWhとは？新電力は停電しやすい？賃貸でも乗り換えできる？など、気になる疑問にお答えします。",
-  alternates: { canonical: "/faq" },
+  alternates: { canonical: "https://wattly.jp/faq" },
   openGraph: {
     title: "よくある質問",
     description:

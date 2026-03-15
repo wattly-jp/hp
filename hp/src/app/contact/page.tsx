@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "お問い合わせ",
   description:
     "Wattlyへのお問い合わせはこちら。記事に関するご質問や掲載のご相談など、お気軽にご連絡ください。",
-  alternates: { canonical: "/contact" },
+  alternates: { canonical: "https://wattly.jp/contact" },
   openGraph: {
     title: "お問い合わせ",
     description:

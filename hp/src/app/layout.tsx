@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   description:
     "電力会社の選び方から太陽光・蓄電池まで、暮らしのエネルギー情報をわかりやすくお届けするメディアサイトです。",
   alternates: {
-    canonical: "/",
+    canonical: "https://wattly.jp",
   },
   openGraph: {
     siteName: "Wattly",
@@ -69,6 +69,7 @@ export default function RootLayout({
               url: "https://wattly.jp",
               description:
                 "電力会社の選び方から太陽光・蓄電池まで、暮らしのエネルギー情報をわかりやすくお届けするメディアサイトです。",
+              inLanguage: "ja",
               publisher: {
                 "@type": "Organization",
                 name: "Wattly",
