@@ -12,6 +12,9 @@ export const metadata: Metadata = {
     description:
       "Wattlyへのお問い合わせはこちら。記事に関するご質問や掲載のご相談など、お気軽にご連絡ください。",
     url: "https://wattly.jp/contact",
+    type: "website",
+    siteName: "Wattly",
+    locale: "ja_JP",
   },
 };
 

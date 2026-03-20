@@ -12,6 +12,9 @@ export const metadata: Metadata = {
     description:
       "電気料金の仕組みや電力会社の乗り換えについて、よくある質問をまとめました。",
     url: "https://wattly.jp/faq",
+    type: "website",
+    siteName: "Wattly",
+    locale: "ja_JP",
   },
 };
 

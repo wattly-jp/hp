@@ -14,6 +14,8 @@ export const metadata: Metadata = {
       "エリアと使用量で電力会社の料金を比較。最安プランが一目でわかります。",
     url: "https://wattly.jp/simulator",
     type: "website",
+    siteName: "Wattly",
+    locale: "ja_JP",
   },
 };
 

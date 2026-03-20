@@ -30,6 +30,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: article.description,
       url,
       type: "article",
+      siteName: "Wattly",
+      locale: "ja_JP",
       publishedTime: article.date || undefined,
       modifiedTime: article.lastModified || article.date,
     },

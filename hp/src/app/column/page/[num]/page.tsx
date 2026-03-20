@@ -23,6 +23,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description:
       "電力会社の選び方、電気代の節約、太陽光・蓄電池など暮らしのエネルギーに関する記事をまとめています。",
     alternates: { canonical: `https://wattly.jp/column/page/${page}` },
+    openGraph: {
+      title: `コラム（${page}ページ目）`,
+      description:
+        "電力会社の選び方、電気代の節約、太陽光・蓄電池など暮らしのエネルギーに関する記事をまとめています。",
+      url: `https://wattly.jp/column/page/${page}`,
+      type: "website",
+      siteName: "Wattly",
+      locale: "ja_JP",
+    },
   };
 }
 
