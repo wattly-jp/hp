@@ -3,6 +3,7 @@ import { BRAND, NAV_ITEMS } from "@/lib/constants";
 
 const ZH_SITES = [
   { name: "LunaPos", url: "https://lunapos.jp", desc: "ナイト業界向けPOS" },
+  { name: "Kaigaijin", url: "https://kaigaijin.jp", desc: "海外在住日本人メディア" },
   { name: "Casinohub", url: "https://casinohub.jp", desc: "カジノ向け管理SaaS" },
   { name: "Roomly", url: "https://hp.roomly.jp", desc: "賃貸管理SaaS" },
 ];
