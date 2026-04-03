@@ -22,6 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: BASE, lastModified: latestDate, changeFrequency: "weekly", priority: 1 },
     { url: `${BASE}/simulator`, lastModified: new Date("2026-03-01"), changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE}/providers`, lastModified: new Date("2026-04-03"), changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/column`, lastModified: latestDate, changeFrequency: "weekly", priority: 0.8 },
     { url: `${BASE}/faq`, lastModified: new Date("2026-03-01"), changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE}/contact`, lastModified: new Date("2026-03-01"), changeFrequency: "yearly", priority: 0.4 },
