@@ -7,12 +7,12 @@ export const metadata: Metadata = {
   title: `自社発電設備を持つ電力会社一覧 - ${BRAND.name}`,
   description:
     "自社発電設備（発電所）を持つ電力会社を網羅的に一覧紹介。大手電力・都市ガス系・独立系発電事業者（IPP）・再エネ系新電力・製造業系まで、発電方式・設備概要・公式URLをまとめました。",
-  alternates: { canonical: "https://wattly.jp/providers" },
+  alternates: { canonical: "https://wattly.jp/providers/own-generation" },
   openGraph: {
     title: "自社発電設備を持つ電力会社一覧",
     description:
       "自社発電設備を持つ電力会社を発電方式・設備概要つきで網羅的に紹介。大手電力から再エネIPPまで。",
-    url: "https://wattly.jp/providers",
+    url: "https://wattly.jp/providers/own-generation",
     type: "website",
     siteName: "Wattly",
     locale: "ja_JP",
