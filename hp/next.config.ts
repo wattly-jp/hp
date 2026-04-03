@@ -4,11 +4,7 @@ const nextConfig: NextConfig = {
   reactCompiler: true,
   async redirects() {
     return [
-      {
-        source: "/providers",
-        destination: "/providers/own-generation",
-        permanent: true,
-      },
+      // URL変更時はここに301リダイレクトを追加する
     ];
   },
 };
