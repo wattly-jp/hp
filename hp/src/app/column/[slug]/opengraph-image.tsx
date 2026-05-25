@@ -1,5 +1,7 @@
 import { ImageResponse } from "next/og";
 import { getArticle, getAllSlugs } from "@/lib/media";
+import { readFileSync } from "fs";
+import { join } from "path";
 
 export const alt = "Wattly コラム";
 export const size = { width: 1200, height: 630 };
@@ -21,22 +23,9 @@ export default async function OgImage({
   const category = article?.category ?? "";
   const date = article?.date ?? "";
 
-  let fontData: ArrayBuffer | undefined;
-  try {
-    const css = await fetch(
-      "https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap",
-      {
-        headers: { "User-Agent": "Mozilla/5.0" },
-        signal: AbortSignal.timeout(5000),
-      }
-    ).then((res) => res.text());
-    const match = css.match(/src: url\(([^)]+\.woff2)\)/);
-    if (match) {
-      fontData = await fetch(match[1], { signal: AbortSignal.timeout(5000) }).then((res) => res.arrayBuffer());
-    }
-  } catch {
-    // フォントfetch失敗時はシステムフォントで描画
-  }
+  const fontData = readFileSync(
+    join(process.cwd(), "public/fonts/NotoSansJP-Bold.woff2")
+  );
 
   return new ImageResponse(
     (
@@ -128,16 +117,14 @@ export default async function OgImage({
     ),
     {
       ...size,
-      fonts: fontData
-        ? [
-            {
-              name: "Noto Sans JP",
-              data: fontData,
-              style: "normal" as const,
-              weight: 700,
-            },
-          ]
-        : [],
+      fonts: [
+        {
+          name: "Noto Sans JP",
+          data: fontData,
+          style: "normal" as const,
+          weight: 700,
+        },
+      ],
     }
   );
 }
