@@ -21,16 +21,22 @@ export default async function OgImage({
   const category = article?.category ?? "";
   const date = article?.date ?? "";
 
-  const fontData = await fetch(
-    "https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap"
-  )
-    .then((res) => res.text())
-    .then((css) => {
-      const match = css.match(/src: url\(([^)]+)\)/);
-      if (!match) throw new Error("Font URL not found");
-      return fetch(match[1]);
-    })
-    .then((res) => res.arrayBuffer());
+  let fontData: ArrayBuffer | undefined;
+  try {
+    const css = await fetch(
+      "https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap",
+      {
+        headers: { "User-Agent": "Mozilla/5.0" },
+        signal: AbortSignal.timeout(5000),
+      }
+    ).then((res) => res.text());
+    const match = css.match(/src: url\(([^)]+\.woff2)\)/);
+    if (match) {
+      fontData = await fetch(match[1], { signal: AbortSignal.timeout(5000) }).then((res) => res.arrayBuffer());
+    }
+  } catch {
+    // フォントfetch失敗時はシステムフォントで描画
+  }
 
   return new ImageResponse(
     (
@@ -122,14 +128,16 @@ export default async function OgImage({
     ),
     {
       ...size,
-      fonts: [
-        {
-          name: "Noto Sans JP",
-          data: fontData,
-          style: "normal",
-          weight: 700,
-        },
-      ],
+      fonts: fontData
+        ? [
+            {
+              name: "Noto Sans JP",
+              data: fontData,
+              style: "normal" as const,
+              weight: 700,
+            },
+          ]
+        : [],
     }
   );
 }
