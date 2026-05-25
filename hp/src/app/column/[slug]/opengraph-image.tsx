@@ -24,7 +24,7 @@ export default async function OgImage({
   const date = article?.date ?? "";
 
   const fontData = readFileSync(
-    join(process.cwd(), "public/fonts/NotoSansJP-Bold.woff2")
+    join(process.cwd(), "public/fonts/NotoSansJP-Bold.ttf")
   );
 
   return new ImageResponse(
