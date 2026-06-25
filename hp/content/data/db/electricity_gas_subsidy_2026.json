@@ -1,0 +1,98 @@
+[
+  {
+    "id": "denkigas_2026_07_low_voltage",
+    "category": "electricity_gas_subsidy",
+    "program": "電気・ガス料金支援",
+    "authority": "経済産業省 資源エネルギー庁",
+    "usage_month": "2026-07",
+    "energy_type": "electricity",
+    "voltage_class": "low",
+    "discount_jpy_per_kwh": 3.5,
+    "last_verified": "2026-06-25"
+  },
+  {
+    "id": "denkigas_2026_07_high_voltage",
+    "category": "electricity_gas_subsidy",
+    "program": "電気・ガス料金支援",
+    "authority": "経済産業省 資源エネルギー庁",
+    "usage_month": "2026-07",
+    "energy_type": "electricity",
+    "voltage_class": "high",
+    "discount_jpy_per_kwh": 1.8,
+    "last_verified": "2026-06-25"
+  },
+  {
+    "id": "denkigas_2026_07_city_gas",
+    "category": "electricity_gas_subsidy",
+    "program": "電気・ガス料金支援",
+    "authority": "経済産業省 資源エネルギー庁",
+    "usage_month": "2026-07",
+    "energy_type": "city_gas",
+    "discount_jpy_per_m3": 14.0,
+    "last_verified": "2026-06-25"
+  },
+  {
+    "id": "denkigas_2026_08_low_voltage",
+    "category": "electricity_gas_subsidy",
+    "program": "電気・ガス料金支援",
+    "authority": "経済産業省 資源エネルギー庁",
+    "usage_month": "2026-08",
+    "energy_type": "electricity",
+    "voltage_class": "low",
+    "discount_jpy_per_kwh": 4.5,
+    "last_verified": "2026-06-25"
+  },
+  {
+    "id": "denkigas_2026_08_high_voltage",
+    "category": "electricity_gas_subsidy",
+    "program": "電気・ガス料金支援",
+    "authority": "経済産業省 資源エネルギー庁",
+    "usage_month": "2026-08",
+    "energy_type": "electricity",
+    "voltage_class": "high",
+    "discount_jpy_per_kwh": 2.3,
+    "last_verified": "2026-06-25"
+  },
+  {
+    "id": "denkigas_2026_08_city_gas",
+    "category": "electricity_gas_subsidy",
+    "program": "電気・ガス料金支援",
+    "authority": "経済産業省 資源エネルギー庁",
+    "usage_month": "2026-08",
+    "energy_type": "city_gas",
+    "discount_jpy_per_m3": 18.0,
+    "last_verified": "2026-06-25"
+  },
+  {
+    "id": "denkigas_2026_09_low_voltage",
+    "category": "electricity_gas_subsidy",
+    "program": "電気・ガス料金支援",
+    "authority": "経済産業省 資源エネルギー庁",
+    "usage_month": "2026-09",
+    "energy_type": "electricity",
+    "voltage_class": "low",
+    "discount_jpy_per_kwh": 3.5,
+    "last_verified": "2026-06-25"
+  },
+  {
+    "id": "denkigas_2026_09_high_voltage",
+    "category": "electricity_gas_subsidy",
+    "program": "電気・ガス料金支援",
+    "authority": "経済産業省 資源エネルギー庁",
+    "usage_month": "2026-09",
+    "energy_type": "electricity",
+    "voltage_class": "high",
+    "discount_jpy_per_kwh": 1.8,
+    "last_verified": "2026-06-25"
+  },
+  {
+    "id": "denkigas_2026_09_city_gas",
+    "category": "electricity_gas_subsidy",
+    "program": "電気・ガス料金支援",
+    "authority": "経済産業省 資源エネルギー庁",
+    "usage_month": "2026-09",
+    "energy_type": "city_gas",
+    "discount_jpy_per_m3": 14.0,
+    "last_verified": "2026-06-25"
+  }
+]

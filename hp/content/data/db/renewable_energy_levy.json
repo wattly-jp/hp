@@ -1,0 +1,18 @@
+[
+  {
+    "id": "reene_levy_2025",
+    "category": "renewable_energy_levy",
+    "levy_name": "再生可能エネルギー発電促進賦課金",
+    "fiscal_year": 2025,
+    "levy_jpy_per_kwh": 3.98,
+    "last_verified": "2026-06-25"
+  },
+  {
+    "id": "reene_levy_2026",
+    "category": "renewable_energy_levy",
+    "levy_name": "再生可能エネルギー発電促進賦課金",
+    "fiscal_year": 2026,
+    "levy_jpy_per_kwh": 4.18,
+    "last_verified": "2026-06-25"
+  }
+]
